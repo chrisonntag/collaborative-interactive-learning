@@ -447,18 +447,18 @@ with a view on future research interests.\notes{Relation to Organic Computing?}
 
 
 \section{Algorithmic Foundations}
-Bevor wir uns genauer den Anwendungen und Herausforderungen von CIL widmen, schauen wir uns 
-zuerst vorhandene machine learning Strategien und Algorithmen an. Wie oben bereits angedeutet, 
-gibt es eine Vielzahl an Definitionen für den Begriff ML\@. Hauptsächlich hat jedoch Arthur Samuel 
-diesen Begriff im Jahr 1959 geprägt. Seitdem hat sich in diesem Bereich natürlich einiges geändert, 
-jedoch gilt die Definition, dass ML Computern erlaubt Probleme zu lösen, ohne speziell dafür 
-programmiert zu sein, heute immer noch\cite{MLStudiesUsingCheckers:samuel}.
+Before we take a closer look at the applications and challenges of CIL, first consider the 
+following existing machine learning strategies and algorithms. As already mentioned above, 
+there is a multitude of definitions for the term ML\@. But primarily, Arthur Samuel 
+coined this term in 1959. Of course, a lot has changed in this area since then, 
+however, the definition that ML allows computers to solve problems without being 
+specifically programmed to do so, is still valid today\cite{MLStudiesUsingCheckers:samuel}.
 
-Über die letzten Jahrzehnte hat sich ML stark weiterentwickelt und ist zu einem Bereich 
-starken Forschungsinteresse vieler verschiedener Akteure geworden, was es schwierig macht, 
-Lern-Strategien in verschiedene Kategorien einzuteilen. Unterschiedliche Forscher nutzen 
-dazu verschiedene Ansätze\cite{FoundationsOfML:mohri}\cite{Structure:corne}. Im folgenden 
-wollen wir fünf Strategien vorstellen\cite{FoundationsOfML:mohri}.
+Over the last decades, ML has developed significantly and has become an area of
+research interest for many different actors, which makes it difficult to divide learning 
+strategies into several categories. Different researchers are using different approaches 
+for that\cite{FoundationsOfML:mohri}\cite{Structure:corne}. 
+In the following section we want to present five strategies\cite{FoundationsOfML:mohri}.
 
 \subsection{Supervised learning}
 Basically supervised learning is the way of learning from labeled examples and making predictions 
@@ -467,63 +467,87 @@ where labeled data is easy to obtain. The spam mail example discussed in the int
 instance of supervised learning.
 
 \subsection{Unsupervised learning}
-Im Gegensatz zu supervised learning erhält der Lernende mit dieser Technik ausschließlich 
-unlabeled training data und macht Vorraussagen für alle ungesehene Punkte. Diese Technik ist 
-relativ ähnlich zu der Art, wie Säuglinge neue Sachen lernen (Lernen von Sprache) und 
-findet zum Beispiel Einsatz im Clustering von Daten in Gruppen\cite{BrainInf:holzinger}.
+In contrast to supervised learning, with this technique the learner only receives 
+unlabeled training data and makes predictions for all unseen points. This technique is 
+relatively similar to the way infants learn new things (e.g.\ learning a language) and 
+is used, for example, in clustering data into groups\cite{BrainInf:holzinger}.
 
 \subsection{Semi-supervised learning}
-Wie der Name suggeriert erhält der Lernende bei dieser Technik Trainingsdaten, die sowohl aus 
-labeled als auch aus unlabeled data besteht und macht Vorraussagen für alle ungesehenen Punkte.
-Diese Technik wird hauptsählich in Bereichen eingesetzt, in denen Daten leicht zu erreichen sind, 
-aber das finden von passenden Labels teuer ist.
+As the name suggests, the learner receives training data, which consists of both 
+labeled as well as unlabelled data and makes predictions for all unseen points.
+This technique is mainly used in areas where data is easily accessible, 
+but finding the right label is expensive.
 
 \subsection{Reinforcement Learning}\label{reinforcement}
-Reinforcement Learning ist der wohl älteste Ansatz und ein potentiell wichtiger Ansatz für CIL\@. 
-Der Lernende interagiert mit seiner Umgebung, um neue Informationen zu gewinnen. Für jede Aktion 
-erhält er eine Belohnung. Sein Ziel ist es über mehrere Wiederholungen seine Belohnung zu 
-maximieren. Er befindet sich so jedoch im Zwiespalt zwischen der Entscheidung bereits gewonnene 
-Information auszunutzen oder mehr Informationen durch weiter Aktionen zu erhalten.
+Reinforcement learning is probably the oldest approach and a potentially important one for CIL\@. 
+The learner interacts with his environment to gain new information. For each action 
+he'll gets a reward. His goal is to maximize his reward over several repetitions. 
+However, he is in conflict with using what has already been won by his actions 
+or to get more information through further actions.
 
 \subsection{Active Learning}\label{active}
-Das Ziel von Active Learning ist es, durch geschicktes interaktives Agieren mit anderen Agenten 
-bereits vorhandene Datenpunkte zu beschriften und so eine ähnliche Performance bei weniger 
-Informationen zu erreichen, wie in der Methode des supervised learning. Um das zu erreichen, 
-benötigt der Lernende eine Auswahlstrategie\cite{ActiveToDedicated:calma}, die entscheidet ob 
-eine Aktion einen ausreichend großen für das beschriften eines Datenpunkts bringt oder nicht.
+The goal of Active Learning is to interact with other agents in a clever way in order 
+to label already existing data points and thus achieve a similar performance at less available 
+Information as in the method of supervised learning. To achieve this, 
+the learner needs a selection strategy\cite{ActiveToDedicated:calma} that decides whether 
+an action has enough information content to label a data point or not.
+
 
 \section{When is using CIL helpful?}\label{AdvantageOfCIL}
-In etablierten ML Systemen muss für jede spezielle Anwendung ein eigenes Modell im Voraus 
-entworfen und trainiert werden. ML Systeme haben also einen relativ schmalen Anwendungsrahmen. 
-Die Idee bei CIL-Systemen ist, dass sie ein Leben lang lernen und selbstorganisiert Wissen 
-aus verschiedenen Quellen sammeln und auswerten, um so gemeinsam mit anderen technischen 
-und menschlichen Agenten kollaborierend und austauschend Probleme lösen\cite{CIL:sick}. 
-Der CIL-Ansatz integriert also ganz bewusst andere intelligente Systeme 
-(Menschen und Maschinen) in den Entscheidungsprozess, um für die einzelnen Entitäten 
-ansonsten schwierige Probleme einfacher zu lösen.
-Ein weiterer Unterschied zu klassischen Ansätzen stellt der wechselseitig Nutzen dar. 
-Maschinen profitieren nicht nur von Trainingsdaten anderer Agenten, sondern leisten 
-einen eigenen Beitrag, um Kollaborationsprozesse von Menschen aktiv zu unterstützen, indem 
-sie ihre Wünsche und Bedürfnisse erkennen und entsprechend reagieren\cite{CIL:sick}.
+In established ML systems, a separate model must be developed and trained in advance for 
+each specific application. ML systems therefore have a relatively narrow application frame. 
+The idea behind CIL systems is that they learn and self-organize knowledge throughout their lives. 
+They collect information from various sources and evaluate the obtained data, so that they 
+can solve problems together with other technical and human agents in a 
+collaborative and interchangeable way\cite{CIL:sick}.
+The CIL approach therefore deliberately integrates other intelligent systems 
+(people and machines) into the decision-making process in order to ensure that the individual entities 
+can solve otherwise difficult problems much easier.
+Another difference to classical approaches is the mutual benefit. 
+Machines not only benefit from training data of other agents, but also provide 
+an own contribution to actively support people's collaboration processes by 
+recognising their wishes and needs and reacting accordingly\cite{CIL:sick}.
 \notes{D-CIL und O-CIL, obwohl man unterscheidet, betrachten wir hier nur allgemeines Modell.}
 
 \section{Classification of CIL in Organic Computing}
-CIL-Systeme können sozusagen teilweise als organisch strukturierte Informationstechnologie verstanden 
-werden, die sogenannte Selbst-x-Eigenschaften erfüllen\cite{Organic:schloer}\cite{Organic:schmeck}, 
-sich also 
+CIL systems can be understood as organically structured information technology
+which fulfill so-called self-x-properties\cite{Organic:schloer}\cite{Organic:schmeckt}.
+They
 \begin{itemize}
-    \item selbst konfigurieren, in dem Sinn, dass sie nicht von Entwicklern auf einen 
-        Anwendungsfall ausgerichtet werden, 
-    \item selbst optimieren, indem sie verschiedene Strategien des ML anwenden, um ihr 
-        Wissen zu erweitern, 
-    \item und sich selbst heilen und schützen, da Kooperation mit anderen System möglich ist.
+    \item configure themselves in the sense that they are not aligned by developers to an application case,
+    \item optimize themselves by applying various strategies of ML to expand their knowledge,
+    \item heal and protect themselves because cooperation with other systems is possible.
 \end{itemize}
-Je nachdem welche Methoden des ML eingesetzt werden, sind CIL-Systeme in der Entwicklung auch 
-mehr oder weniger selbst erklärend\cite{Organic:schloer}.
+Depending on which methods of ML are used, CIL systems are also more or less self-explanatory 
+during development\cite{Organic:schloer}.
 
 \section{Application examples}
 \subsection{Clustering}
+Clustering is the perfect example of a starting point without sufficient information about a database. 
+The basic goal here is to divide a data set into homogeneous groups of individual data points in order to create structure.
+Clustering is used, for example, in most recommendation systems of popular Internet applications (Netflix movie recommendations, YouTube Video Tags \notes{[?]}) to group similar tags or find groups of people with a similar taste in movies.
+Furthermore, clustering is used to identify communities in social networks, for example for target-advertising, or to cluster location-data so that "important places" of a person can be identified.
 
+Unfortunately, real-world data in these areas is often unclean, contains false or unwanted data and is often present in 
+dimensions $>$3, so that people alone, who are otherwise very good at recognizing similarities, are dependent on ML and vice-versa.
+
+There are different approaches to cluster data into homogeneous groups. One of them is the k-Means algorithm\notes{[?]}. This requires at the beginning the number of $k$ clusters it should find. It then randomly places $k$ centroids in space, which should represent the center of a cluster, and assigns each item to the nearest centroid. After the assignment, each centroid is placed at the center of all items assigned to it. This process of assigning the items and moving the centroids to
+the center is now repeated until the assignments of the items no longer change.
+
+What all cluster algorithms have in common is that they need a way to compare data points for similarity.
+Classically, data points are tried to display in an n-dimensional metric space and, for example, their Euclidean distance is measured for similarity.
+The Euclidean distance between two data points $p = (p_1, p_2, \dots, p_n)$ and $q = (q_1, q_2, \dots, q_n)$ and thus their
+similarity, when a small result means more similar, is defined as
+\begin{equation}
+    similarity(p, q) = \sqrt{\sum_{i=1}^{n} (q_i - p_i)^{2}}.
+\end{equation}
+
+Since data is usually multidimensional, i.e.\ much larger than three, suitable attributes must be selected for the comparison. 
+However, the problem here is that similarity functions are influenced by subjective factors, since experts from different 
+fields also find different partial aspects of the amount of data to be investigated interesting.
+Therefore, the CIL approach can provide a decisive advantage in this case, as the knowledge and assessment of 
+different experts and other systems can be used to make such decisions.
+An interesting interactive approach follows\notes{[1]} to create a personal gazetteer from a users location data.
 
 \subsection{Health Domain}
 
@@ -533,36 +557,9 @@ mehr oder weniger selbst erklärend\cite{Organic:schloer}.
 
 \subsection{Agriculture}
 
-
-\begin{itemize}
-    \item Clustering
-        \begin{itemize}
-            \item (clustering communities on Facebook for group target advertising (politics))
-            \item Methods: k-Means, DJ-clustering? --> add paper ref
-        \end{itemize}
-    \item Health
-        \begin{itemize}
-            \item Detecting cancer on radon, Prof. Sauer/Forwiss research?
-            \item Growing number of users are using smartphones sensors and related devices for 
-                collating a range of health information, track regularly and detect patterns (noise?, privacy?)
-        \end{itemize}
-    \item Industry and Manufacturing
-        \begin{itemize}
-            \item quality assurance
-        \end{itemize}
-    \item Agriculture
-        \begin{itemize}
-            \item Detecting bad grains, $\rightarrow$ Hackzurich project
-        \end{itemize}
-\end{itemize}
-
-
-\section{Limitations/Challenges}
+\section{Challenges and future directions}
 Challenges
-
-
-\section{Conclusion/Future Directions}
-The conclusion goes here.
+Ethical Questions
 
 
 % An example of a floating figure using the graphicx package.
