@@ -550,17 +550,43 @@ different experts and other systems can be used to make such decisions.
 An interesting interactive approach follows\notes{[1]} to create a personal gazetteer from a users location data.
 
 \subsection{Health Domain}
+Also and especially in medical diagnosis, doctors are often confronted with a very small amount of data.
+In rare diseases in particular, there are not enough training examples to use classical ML approaches efficiently and with a low error rate in practice.
+In many areas, such as emergency surgery, results are often required within a very short time, which makes pure ML techniques useless in many cases.
+After successfully completing their medical studies, however, doctors with relatively little experience already have the ability to examine and classify X-rays sufficiently accurately for various diseases and anomalies.
+In these cases the intuitiveness of one or more people can profitably support the CIL system.
+
+Another area of application in the field of medical research also takes advantage of human puzzle-solving intuition. The project "foldit" of the University of Washington has for years achieved remarkable results\notes{[?]} from the gamification of a problem related to biology.
+The researchers have developed a game that helps you to optimize and predict possible protein structures with the help of players\notes{[website]}.
+Proteins can fold in a number of different ways. Even with smaller proteins, the number of possible folds can be extremely high due to their many degrees of freedom.
+The aim of the game is to determine the optimal folding and thus the "most comfortable" state of a protein in order to be able to develop appropriate drugs for this shape.
+Since the structure determines the function of a protein\notes{[website]}, new forms can also be used to treat diseases such as AIDS or cancer more effectively.
+
+So we already see here a system that at least involves the human being as a collective form of knowledge acquisition in the solution of complex problems, even if not directly with technical systems.
+The next step towards CIL in this area could be to incorporate the results of human puzzle-solving into the calculations and decisions of ML systems in order to proactively support humans (bi-directional way of inputs) in finding solutions (for example by excluding unpromising folds).
 
 
 \subsection{Industry and Manufacturing}
+The primary goal in manufacturing is to keep production up and running under almost all circumstances. 
+Even short downtimes of production lines result in high sales losses for companies.
+This is why it is important to keep an eye on the wear of work equipment, production lines and the condition of machines in general at all times.
+Current systems already use various ML techniques\notes{[MLinManu]} to cover these applications.
 
-
-\subsection{Agriculture}
+For CIL systems, it is conceivable that, in addition to the sensor data used by the devices to "measure" wear, to call in expert knowledge so that rare cases that are easily recognisable as a suspicious situation for humans, can be identified at an early stage by the whole system.
+In this process, a CIL system must assess at runtime which expert should be asked what and when in order 
+to achieve maximum information content.
 
 \section{Challenges and future directions}
-Challenges
-Ethical Questions
+Since the field of Collaborative Interactive Learning is still a very new field of research, there is still a lot of 
+research to be done in the areas of continuous knowledge acquisition 
+and evaluation from several heterogeneous sources (Internet, expert knowledge, etc.), 
+and interaction with multiple other agents (humans and other CIL systems), 
+especially when systems have to adapt to changing situations during their lifetime.
 
+Not only technical difficulties have to be overcome, but also social ones. In order to use ML techniques effectively, 
+at least a minimum amount of data has to be provided in order to be analyzed. To do this, we need to decide 
+to what extent we are willing to disclose our data for the benefits of CIL systems and ML in general.
+Inhibitions in human-machine communication and interaction must also be overcome for CIL systems to be used successfully.
 
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
