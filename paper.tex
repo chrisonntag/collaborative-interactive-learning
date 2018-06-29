@@ -6,8 +6,6 @@
 % manually specify the path to it like:
 % \documentclass[conference,compsoc]{../sty/IEEEtran}
 
-\usepackage[ngerman]{babel}
-\usepackage{amsmath}
 \usepackage{xcolor}
 \newcommand\notes[1]{\textcolor{red}{#1}}
 
@@ -351,6 +349,7 @@ to continuously improve results over a systems whole lifetime: So called
 \textit{Collaborative Interactive Learning (CIL)} systems.
 This paper contributes in presenting an overview of classical ML approaches 
 in comparison with CIL and outlines possible areas of application. 
+\notes{Abstract kuerzen, 18th Jahrhundert interessiert niemanden.}
 \end{abstract}
 
 
@@ -440,6 +439,7 @@ generation of systems with
         in order to improve the own knowledge and the one of other entities in a 
         bi-directional way\cite{CIL:sick}.
 \end{itemize}
+
 This article gives a brief introduction on possible areas of application for the CIL-approach. 
 It starts with an overview of classical machine learning scenarios, discussing where they are 
 facing limits and motivating the use of CIL\@. It then lists possble applications and concludes 
@@ -492,7 +492,7 @@ Informationen zu erreichen, wie in der Methode des supervised learning. Um das z
 benötigt der Lernende eine Auswahlstrategie\cite{ActiveToDedicated:calma}, die entscheidet ob 
 eine Aktion einen ausreichend großen für das beschriften eines Datenpunkts bringt oder nicht.
 
-\section{When is using CIL helpful?}
+\section{When is using CIL helpful?}\label{AdvantageOfCIL}
 In etablierten ML Systemen muss für jede spezielle Anwendung ein eigenes Modell im Voraus 
 entworfen und trainiert werden. ML Systeme haben also einen relativ schmalen Anwendungsrahmen. 
 Die Idee bei CIL-Systemen ist, dass sie ein Leben lang lernen und selbstorganisiert Wissen 
@@ -505,6 +505,7 @@ Ein weiterer Unterschied zu klassischen Ansätzen stellt der wechselseitig Nutze
 Maschinen profitieren nicht nur von Trainingsdaten anderer Agenten, sondern leisten 
 einen eigenen Beitrag, um Kollaborationsprozesse von Menschen aktiv zu unterstützen, indem 
 sie ihre Wünsche und Bedürfnisse erkennen und entsprechend reagieren\cite{CIL:sick}.
+\notes{D-CIL und O-CIL, obwohl man unterscheidet, betrachten wir hier nur allgemeines Modell.}
 
 \section{Classification of CIL in Organic Computing}
 CIL-Systeme können sozusagen teilweise als organisch strukturierte Informationstechnologie verstanden 
@@ -517,10 +518,20 @@ sich also
         Wissen zu erweitern, 
     \item und sich selbst heilen und schützen, da Kooperation mit anderen System möglich ist.
 \end{itemize}
-Je nachdem welche Methoden des ML eingesetzt werden sind CIL-Systeme mehr oder weniger 
-selbst erklärend\cite{Organic:schloer}.
+Je nachdem welche Methoden des ML eingesetzt werden, sind CIL-Systeme in der Entwicklung auch 
+mehr oder weniger selbst erklärend\cite{Organic:schloer}.
 
 \section{Application examples}
+\subsection{Clustering}
+
+
+\subsection{Health Domain}
+
+
+\subsection{Industry and Manufacturing}
+
+
+\subsection{Agriculture}
 
 
 \begin{itemize}
@@ -529,14 +540,13 @@ selbst erklärend\cite{Organic:schloer}.
             \item (clustering communities on Facebook for group target advertising (politics))
             \item Methods: k-Means, DJ-clustering? --> add paper ref
         \end{itemize}
-    \item Stock trading
-    \item Health domain
+    \item Health
         \begin{itemize}
             \item Detecting cancer on radon, Prof. Sauer/Forwiss research?
             \item Growing number of users are using smartphones sensors and related devices for 
                 collating a range of health information, track regularly and detect patterns (noise?, privacy?)
         \end{itemize}
-    \item Industry 4.0
+    \item Industry and Manufacturing
         \begin{itemize}
             \item quality assurance
         \end{itemize}
@@ -697,6 +707,8 @@ The conclusion goes here.
     M{\"u}ller-Schloer, C., von der Malsburg, C., \& W{\"u}rt, R. P. (2004). Organic computing. Informatik-Spektrum, 27(4), 332-336.
 \bibitem{Organic:schmeck}
     Schmeck, H. (2005, May). Organic computing-a new vision for distributed embedded systems. In Object-Oriented Real-Time Distributed Computing, 2005. ISORC 2005. Eighth IEEE International Symposium on (pp. 201-203). IEEE.
+\bibitem{Foldit:web}
+    The Science Behind Foldit. (n.d.). Retrieved June 29, 2018, from https://fold.it/portal/info/about. University of Washington, Departments of Computer Science \& Engineering and Biochemistry.
 \end{thebibliography}
 
 
