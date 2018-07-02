@@ -12,30 +12,6 @@
 % Some very useful LaTeX packages include:
 % (uncomment the ones you want to load)
 
-
-% *** MISC UTILITY PACKAGES ***
-%
-%\usepackage{ifpdf}
-% Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
-% compilation based on whether the output is pdf or dvi.
-% usage:
-% \ifpdf
-%   % pdf code
-% \else
-%   % dvi code
-% \fi
-% The latest version of ifpdf.sty can be obtained from:
-% http://www.ctan.org/pkg/ifpdf
-% Also, note that IEEEtran.cls V1.7 and later provides a builtin
-% \ifCLASSINFOpdf conditional that works the same way.
-% When switching from latex to pdflatex and vice-versa, the compiler may
-% have to be run twice to clear warning/error messages.
-
-
-
-
-
-
 % *** CITATION PACKAGES ***
 %
 \ifCLASSOPTIONcompsoc
@@ -93,29 +69,6 @@
   % every instance of \includegraphics
   % \DeclareGraphicsExtensions{.eps}
 \fi
-% graphicx was written by David Carlisle and Sebastian Rahtz. It is
-% required if you want graphics, photos, etc. graphicx.sty is already
-% installed on most LaTeX systems. The latest version and documentation
-% can be obtained at: 
-% http://www.ctan.org/pkg/graphicx
-% Another good source of documentation is "Using Imported Graphics in
-% LaTeX2e" by Keith Reckdahl which can be found at:
-% http://www.ctan.org/pkg/epslatex
-%
-% latex, and pdflatex in dvi mode, support graphics in encapsulated
-% postscript (.eps) format. pdflatex in pdf mode supports graphics
-% in .pdf, .jpeg, .png and .mps (metapost) formats. Users should ensure
-% that all non-photo figures use a vector format (.eps, .pdf, .mps) and
-% not a bitmapped formats (.jpeg, .png). The IEEE frowns on bitmapped formats
-% which can result in "jaggedy"/blurry rendering of lines and letters as
-% well as large increases in file sizes.
-%
-% You can find documentation about the pdfTeX application at:
-% http://www.tug.org/applications/pdftex
-
-
-
-
 
 % *** MATH PACKAGES ***
 %
@@ -220,33 +173,6 @@
 % http://www.ctan.org/pkg/fixltx2e
 
 
-%\usepackage{stfloats}
-% stfloats.sty was written by Sigitas Tolusis. This package gives LaTeX2e
-% the ability to do double column floats at the bottom of the page as well
-% as the top. (e.g., "\begin{figure*}[!b]" is not normally possible in
-% LaTeX2e). It also provides a command:
-%\fnbelowfloat
-% to enable the placement of footnotes below bottom floats (the standard
-% LaTeX2e kernel puts them above bottom floats). This is an invasive package
-% which rewrites many portions of the LaTeX2e float routines. It may not work
-% with other packages that modify the LaTeX2e float routines. The latest
-% version and documentation can be obtained at:
-% http://www.ctan.org/pkg/stfloats
-% Do not use the stfloats baselinefloat ability as the IEEE does not allow
-% \baselineskip to stretch. Authors submitting work to the IEEE should note
-% that the IEEE rarely uses double column equations and that authors should try
-% to avoid such use. Do not be tempted to use the cuted.sty or midfloat.sty
-% packages (also by Sigitas Tolusis) as the IEEE does not format its papers in
-% such ways.
-% Do not attempt to use stfloats with fixltx2e as they are incompatible.
-% Instead, use Morten Hogholm'a dblfloatfix which combines the features
-% of both fixltx2e and stfloats:
-%
-% \usepackage{dblfloatfix}
-% The latest version can be found at:
-% http://www.ctan.org/pkg/dblfloatfix
-
-
 
 
 % *** PDF, URL AND HYPERLINK PACKAGES ***
@@ -273,13 +199,6 @@
 
 
 \begin{document}
-%
-% paper title
-% Titles are generally capitalized except for words such as a, an, and, as,
-% at, but, by, for, in, nor, of, on, or, the, to and up, which are usually
-% not capitalized unless they are the first or last word of the title.
-% Linebreaks \\ can be used within to get better formatting as desired.
-% Do not put math or special symbols in the title.
 \title{Resolving Limits Faced by Classical Machine Learning Approaches:\\Areas of Application for 
 Collaborative Interactive Learning Techniques}
 
@@ -292,37 +211,6 @@ Collaborative Interactive Learning Techniques}
 sonntagc@fim.uni-passau.de}
 }
 
-% conference papers do not typically use \thanks and this command
-% is locked out in conference mode. If really needed, such as for
-% the acknowledgment of grants, issue a \IEEEoverridecommandlockouts
-% after \documentclass
-
-% for over three affiliations, or if they all won't fit within the width
-% of the page (and note that there is less available width in this regard for
-% compsoc conferences compared to traditional conferences), use this
-% alternative format:
-% 
-%\author{\IEEEauthorblockN{Michael Shell\IEEEauthorrefmark{1},
-%Homer Simpson\IEEEauthorrefmark{2},
-%James Kirk\IEEEauthorrefmark{3}, 
-%Montgomery Scott\IEEEauthorrefmark{3} and
-%Eldon Tyrell\IEEEauthorrefmark{4}}
-%\IEEEauthorblockA{\IEEEauthorrefmark{1}School of Electrical and Computer Engineering\\
-%Georgia Institute of Technology,
-%Atlanta, Georgia 30332--0250\\ Email: see http://www.michaelshell.org/contact.html}
-%\IEEEauthorblockA{\IEEEauthorrefmark{2}Twentieth Century Fox, Springfield, USA\\
-%Email: homer@thesimpsons.com}
-%\IEEEauthorblockA{\IEEEauthorrefmark{3}Starfleet Academy, San Francisco, California 96678-2391\\
-%Telephone: (800) 555--1212, Fax: (888) 555--1212}
-%\IEEEauthorblockA{\IEEEauthorrefmark{4}Tyrell Inc., 123 Replicant Street, Los Angeles, California 90210--4321}}
-
-
-
-% use for special paper notices
-%\IEEEspecialpapernotice{(Invited Paper)}
-
-
-
 % make the title area
 \maketitle
 
@@ -331,7 +219,7 @@ sonntagc@fim.uni-passau.de}
 \begin{abstract}
 The area of \textit{Machine Learning (ML)} has experienced a high 
 level of research interest in the last few years with it's underlying 
-theory reaching back far into the 18Th century. Due to minimal 
+theory reaching back far into the 18th century. Due to minimal 
 costs for computation and the massive availability of data in the 
 Internet recent research interest has been mainly focused on 
 \textit{automatic ML (aML)}. In this ML paradigm a model 
@@ -349,26 +237,25 @@ to continuously improve results over a systems whole lifetime: So called
 \textit{Collaborative Interactive Learning (CIL)} systems.
 This paper contributes in presenting an overview of classical ML approaches 
 in comparison with CIL and outlines possible areas of application. 
-\notes{Abstract kuerzen, 18th Jahrhundert interessiert niemanden.}
 \end{abstract}
 
 
-\section{Introduction}
+\section{Introduction}\label{sec:intro}
 As with most concepts, there is no canonical 
 definition for the term \textit{Machine Learning} but at its most basic form it 
 can be described as algorithms that learn from a given set of training examples 
 $\{(x_i, y_i)\}$ of inputs $x_i$ and outputs $y_i$ in order to 
 make predictions on unknown input data. According to Tom 
-Mitchell, a Computer Scientist from Carnegie Mellon University, ML tries 
+Mitchell, a computer scientist from Carnegie Mellon University,  ML tries 
 to answer how we can build algorithms that automatically improve through 
-experience and what fundamental laws govern all these learning processes\cite{ML:mitchell}.
+experience and which fundamental laws govern all these learning processes\cite{ML:mitchell}.
 The area of ML in general is a fast-growing discipline at the intersection of statistics 
 and computer science and has experienced massive research interest in the last decades.
 With its various application possibilities it has also been an interesting branch for 
 economists and entrepreneurs.
 Since ML scenarios like \textit{supervised}, \textit{unsupervised} and 
 \textit{semi-supervised} learning, which we will cover later, are heavily data-driven, 
-the Internet with its massive amount of data has contributed to the further development 
+the internet with its massive amount of data has contributed to the further development 
 of research in the area of fully automated learning algorithms. Today, we can see the 
 results in a variety of applications\cite{FoundationsOfML:mohri}\cite{DisciplineOfML:mitchell}, 
 not limited to the list below.
@@ -377,46 +264,47 @@ not limited to the list below.
         Many current mail programs have built-in spam detection which originally used
         simple regular expressions in order to detect phrases commonly used in spam mails.
         With state-of-the-art ML techniques it is not only possible for a mail program to 
-        query for a number of words but to the pattern how spam mails are constructed and 
+        query for a number of words but to recognise patterns of how spam mails are constructed and 
         to adapt itself to new types of spam.
     \item \textit{Speech recognition}. 
-        Most commercial applications for speech recognition use ML to train itself to 
-        recognize a users speech input. \notes{Umformen. Beschreiben, wofür ML genutzt wird.}
+        Most commercial applications for speech recognition also use ML to train itself to 
+        recognise a user's speech input in order to perform further semantic analysis on
+        that data.
     \item \textit{Image recognition, OCR}.
         Machine Learning methods have also been successfully applied in domains where it's 
         important to extract information from images such as detecting and classifiying 
-        objects or recognize handwritten \notes{only handwritten?} characters. Image 
+        objects or recognizing handwritten characters. Image 
         recognition and OCR are therefore for example used in medical diagnosis to 
         detect cancer on radiographs, in autonomous vehicles to detect obstacles and to 
-        stay on track or in post-offices to sort envelopes with hand-written addresses. 
-        \notes{Nochmal eine Quellenangabe?}
+        stay on track or in post-offices to sort envelopes with hand-written addresses
+        \cite{DisciplineOfML:mitchell}.
     \item \textit{Games}.
         Computer Games ususally offer a Multiplayer mode where a user can interact and 
         play the game even without a human opponent. For games with a small number of 
-        possible moves after each turn, and therefore a realtively small game tree conatining 
+        possible moves after each turn, and therefore a realtively small game tree containing 
         all possible moves, the minimax algorithm\cite{Prog2:bachmaier} can be sufficient. 
         It figures out which next move would minimize the worst-case scenario for all subsequent 
-        moves. Therefore, it needs to know all possible moves, which can easily be computationally 
+        moves. Therefore, it needs to know all possible moves, which can easily become computationally 
         infeasible for games like Chess or AlphaGo where a general move faces between 35 (Chess) and 
         250 (AlphaGo) possible subsequent game states.
-        In order to still have challenging opponents modern Games are using ML to gain experience 
+        In order to still have challenging opponents, modern Games are using ML to gain experience 
         by themselves.
     \item \textit{Search engines, Recommendation systems}.
         Nearly all current search machines use ML in one fashion or another. They mainly use these 
-        techniques for \textit{(1) User classification}\notes{[q?]} in order to offer personalized 
+        techniques for \textit{(1) User classification}\cite{DisciplineOfML:mitchell} in order to offer personalized 
         search results and for \textit{(2) Query classification} in order to ``understand' a 
         users query and to provide further meaningful information.
 \end{itemize}
 
-Despite the successfull application of ML in a lot of fields, most of these examples 
+Despite the successful application of ML in a lot of fields, most of these examples 
 need a sufficient amount of labeled training data ($x_i$ with assigned $y_i$) in order to make 
-correct predictions on or discover structured patterns in unknown data $x_j$. However, most 
+correct predictions on, or discover structured patterns in unknown data $x_j$. However, most 
 data sets in the biomedical domain, in robotics or in other fields, where data is collected 
-from sensor systems or other unreliable sources, are often either not available (e.g.\ rare 
+from sensor systems or other unreliable sources, often are either not available (e.g.\ rare 
 diseases, borderline cases in road traffic, \dots) or contain noisy data, dirty data or unwanted 
 data due to dirty sensors or poor visibility conditions in camera applications.
-In addition, a machine learning algorithms prediction is solely based on the training data it 
-has seen before. One might argue, that human decisions are also only based on experience they have 
+In addition, a machine learning algorithm's prediction is solely based on the training data it 
+has seen before. One might argue that human decisions are also only based on experience having been
 made since their childhood but humans are often still superior to most algorithms in terms of 
 the instinctive interpretation of complex patterns. Furthermore, they can learn to recognize 
 structural patterns from very few training data.
@@ -442,12 +330,13 @@ generation of systems with
 
 This article gives a brief introduction on possible areas of application for the CIL-approach. 
 It starts with an overview of classical machine learning scenarios, discussing where they are 
-facing limits and motivating the use of CIL\@. It then lists possble applications and concludes 
-with a view on future research interests.\notes{Relation to Organic Computing?}
+facing limits, describing the relation to Organic Computing and motivating the use of CIL\@. 
+It then lists possible applications and concludes 
+with a view on future research interests.
 
 
 \section{Algorithmic Foundations}
-Before we take a closer look at the applications and challenges of CIL, first consider the 
+Before we take a closer look at the applications and challenges of CIL, let's first consider the 
 following existing machine learning strategies and algorithms. As already mentioned above, 
 there is a multitude of definitions for the term ML\@. But primarily, Arthur Samuel 
 coined this term in 1959. Of course, a lot has changed in this area since then, 
@@ -458,19 +347,19 @@ Over the last decades, ML has developed significantly and has become an area of
 research interest for many different actors, which makes it difficult to divide learning 
 strategies into several categories. Different researchers are using different approaches 
 for that\cite{FoundationsOfML:mohri}\cite{Structure:corne}. 
-In the following section we want to present five strategies\cite{FoundationsOfML:mohri}.
+In the following section i want to present five strategies\cite{FoundationsOfML:mohri}.
 
 \subsection{Supervised learning}
 Basically supervised learning is the way of learning from labeled examples and making predictions 
 for all unseen points. This is the most basic concept of ML and used in a variety of applications 
-where labeled data is easy to obtain. The spam mail example discussed in the introduction is an 
-instance of supervised learning.
+where labeled data is easy to obtain. The spam mail example discussed in the introduction is a 
+case of supervised learning.
 
 \subsection{Unsupervised learning}
-In contrast to supervised learning, with this technique the learner only receives 
+In contrast to supervised learning, the learner here receives only 
 unlabeled training data and makes predictions for all unseen points. This technique is 
 relatively similar to the way infants learn new things (e.g.\ learning a language) and 
-is used, for example, in clustering data into groups\cite{BrainInf:holzinger}.
+is used, for example, in clustering data into groups, which we will discuss later\cite{BrainInf:holzinger}.
 
 \subsection{Semi-supervised learning}
 As the name suggests, the learner receives training data, which consists of both 
@@ -480,15 +369,15 @@ but finding the right label is expensive.
 
 \subsection{Reinforcement Learning}\label{reinforcement}
 Reinforcement learning is probably the oldest approach and a potentially important one for CIL\@. 
-The learner interacts with his environment to gain new information. For each action 
-he'll gets a reward. His goal is to maximize his reward over several repetitions. 
-However, he is in conflict with using what has already been won by his actions 
-or to get more information through further actions.
+The learner constantly interacts with his environment to gain new information. For each action 
+he gets a reward. His goal is to maximize his reward over several repetitions. 
+However, he is in conflict with using the information which has already been discovered by his actions 
+or with getting more information through further actions.
 
 \subsection{Active Learning}\label{active}
 The goal of Active Learning is to interact with other agents in a clever way in order 
 to label already existing data points and thus achieve a similar performance at less available 
-Information as in the method of supervised learning. To achieve this, 
+information as in the method of supervised learning. To achieve this, 
 the learner needs a selection strategy\cite{ActiveToDedicated:calma} that decides whether 
 an action has enough information content to label a data point or not.
 
@@ -496,7 +385,7 @@ an action has enough information content to label a data point or not.
 \section{When is using CIL helpful?}\label{AdvantageOfCIL}
 In established ML systems, a separate model must be developed and trained in advance for 
 each specific application. ML systems therefore have a relatively narrow application frame. 
-The idea behind CIL systems is that they learn and self-organize knowledge throughout their lives. 
+The idea behind CIL systems is that they learn, self-organize and improve knowledge throughout their lives. 
 They collect information from various sources and evaluate the obtained data, so that they 
 can solve problems together with other technical and human agents in a 
 collaborative and interchangeable way\cite{CIL:sick}.
@@ -505,207 +394,95 @@ The CIL approach therefore deliberately integrates other intelligent systems
 can solve otherwise difficult problems much easier.
 Another difference to classical approaches is the mutual benefit. 
 Machines not only benefit from training data of other agents, but also provide 
-an own contribution to actively support people's collaboration processes by 
+an own contribution to actively support human collaboration processes by 
 recognising their wishes and needs and reacting accordingly\cite{CIL:sick}.
-\notes{D-CIL und O-CIL, obwohl man unterscheidet, betrachten wir hier nur allgemeines Modell.}
 
 \section{Classification of CIL in Organic Computing}
 CIL systems can be understood as organically structured information technology
-which fulfill so-called self-x-properties\cite{Organic:schloer}\cite{Organic:schmeckt}.
+which fulfill so-called self-x-properties\cite{Organic:schloer}\cite{Organic:schmeck}.
 They
 \begin{itemize}
     \item configure themselves in the sense that they are not aligned by developers to an application case,
     \item optimize themselves by applying various strategies of ML to expand their knowledge,
-    \item heal and protect themselves because cooperation with other systems is possible.
+    \item heal and protect themselves because cooperation with other systems is possible and desired.
 \end{itemize}
 Depending on which methods of ML are used, CIL systems are also more or less self-explanatory 
 during development\cite{Organic:schloer}.
 
 \section{Application examples}
+In the following we will discuss some interesting application examples.
+
 \subsection{Clustering}
-Clustering is the perfect example of a starting point without sufficient information about a database. 
-The basic goal here is to divide a data set into homogeneous groups of individual data points in order to create structure.
-Clustering is used, for example, in most recommendation systems of popular Internet applications (Netflix movie recommendations, YouTube Video Tags \notes{[?]}) to group similar tags or find groups of people with a similar taste in movies.
-Furthermore, clustering is used to identify communities in social networks, for example for target-advertising, or to cluster location-data so that "important places" of a person can be identified.
+Clustering is the perfect example of a starting point without sufficient information about an amount of data. 
+The basic goal here is to divide a data set into homogeneous groups of individual data points in order to create structure in it.
+Data points must be checked for similarity in this context in some way.
+Clustering is used, for example, in most recommendation systems of popular internet applications (Netflix movie recommendations, YouTube Video Tags\cite{YouTube:pasca}) to group similar tags or find groups of people with a similar taste in movies.
+Furthermore, clustering is used to identify communities in social networks, for example for target-advertising, or to cluster location-data so that "important places" of a person can be identified\cite{DJ:frankowski}.
 
 Unfortunately, real-world data in these areas is often unclean, contains false or unwanted data and is often present in 
-dimensions $>$3, so that people alone, who are otherwise very good at recognizing similarities, are dependent on ML and vice-versa.
+dimensions $>$3, so that people alone, who are otherwise very good at recognizing similarities in dimensions $\le3$, are dependent on ML and vice-versa.
 
-There are different approaches to cluster data into homogeneous groups. One of them is the k-Means algorithm\notes{[?]}. This requires at the beginning the number of $k$ clusters it should find. It then randomly places $k$ centroids in space, which should represent the center of a cluster, and assigns each item to the nearest centroid. After the assignment, each centroid is placed at the center of all items assigned to it. This process of assigning the items and moving the centroids to
+There are different approaches to cluster data into homogeneous groups. One of them is the k-Means algorithm\cite{FoundationsOfML:mohri}. In the beginning it requires the number of $k$ clusters it is supposed to find. 
+It then randomly places $k$ centroids in space, which should represent the center of a cluster, and assigns each item to the nearest centroid. After the assignment, each centroid is placed at the center of all items assigned to it. This process of assigning the items and moving the centroids to
 the center is now repeated until the assignments of the items no longer change.
 
-What all cluster algorithms have in common is that they need a way to compare data points for similarity.
-Classically, data points are tried to display in an n-dimensional metric space and, for example, their Euclidean distance is measured for similarity.
+What all cluster algorithms have in common is that they need a way to compare data points for similarity respectively distance.
+Classically, data points are tried to be displayed in an n-dimensional metric space and, for example, their Euclidean distance is measured for similarity.
 The Euclidean distance between two data points $p = (p_1, p_2, \dots, p_n)$ and $q = (q_1, q_2, \dots, q_n)$ and thus their
 similarity, when a small result means more similar, is defined as
-\begin{equation}
+\begin{equation*}
     similarity(p, q) = \sqrt{\sum_{i=1}^{n} (q_i - p_i)^{2}}.
-\end{equation}
+\end{equation*}
 
 Since data is usually multidimensional, i.e.\ much larger than three, suitable attributes must be selected for the comparison. 
 However, the problem here is that similarity functions are influenced by subjective factors, since experts from different 
-fields also find different partial aspects of the amount of data to be investigated interesting.
+fields also find different partial aspects of the amount of data that is examined interesting.
 Therefore, the CIL approach can provide a decisive advantage in this case, as the knowledge and assessment of 
 different experts and other systems can be used to make such decisions.
-An interesting interactive approach follows\notes{[1]} to create a personal gazetteer from a users location data.
+An interesting interactive approach follows\cite{DJ:frankowski}, which creates a personal gazetteer from a user's location data 
+by interactively asking the right questions after cleaning the data from unwanted noise.
 
 \subsection{Health Domain}
 Also and especially in medical diagnosis, doctors are often confronted with a very small amount of data.
-In rare diseases in particular, there are not enough training examples to use classical ML approaches efficiently and with a low error rate in practice.
-In many areas, such as emergency surgery, results are often required within a very short time, which makes pure ML techniques useless in many cases.
-After successfully completing their medical studies, however, doctors with relatively little experience already have the ability to examine and classify X-rays sufficiently accurately for various diseases and anomalies.
+For rare diseases in particular, there are not enough training examples to use classical ML approaches efficiently and with a low error rate in practice.
+In many areas, such as emergency surgery, results are often required within a very short time, which makes pure ML techniques useless in a lot of cases.
+After successfully completing their medical studies, however, doctors, even with relatively little experience, already have the ability to examine and classify X-rays sufficiently accurately for various diseases and anomalies.
 In these cases the intuitiveness of one or more people can profitably support the CIL system.
 
-Another area of application in the field of medical research also takes advantage of human puzzle-solving intuition. The project "foldit" of the University of Washington has for years achieved remarkable results\notes{[?]} from the gamification of a problem related to biology.
-The researchers have developed a game that helps you to optimize and predict possible protein structures with the help of players\notes{[website]}.
+Another area of application in the field of medical research also takes advantage of human puzzle-solving intuition. 
+For years the project "foldit" of the University of Washington has achieved remarkable results\cite{Foldit:results} from the gamification of a problem related to biology.
+The researchers have developed a game that helps them to optimize and predict possible protein structures with the help of 
+players\cite{Foldit:web}.
 Proteins can fold in a number of different ways. Even with smaller proteins, the number of possible folds can be extremely high due to their many degrees of freedom.
-The aim of the game is to determine the optimal folding and thus the "most comfortable" state of a protein in order to be able to develop appropriate drugs for this shape.
-Since the structure determines the function of a protein\notes{[website]}, new forms can also be used to treat diseases such as AIDS or cancer more effectively.
+The aim of the game is to determine the optimal folding and thus the "most comfortable" state of a protein in order to be able to develop appropriate drugs for and with this shape.
+Since the structure determines the function of a protein\cite{Foldit:web}, new forms can also be used to treat diseases such as AIDS or cancer more effectively.
 
-So we already see here a system that at least involves the human being as a collective form of knowledge acquisition in the solution of complex problems, even if not directly with technical systems.
-The next step towards CIL in this area could be to incorporate the results of human puzzle-solving into the calculations and decisions of ML systems in order to proactively support humans (bi-directional way of inputs) in finding solutions (for example by excluding unpromising folds).
+So we already see a system in this field that at least involves the human being as a collective form of knowledge acquisition in the solution of complex problems, even if not directly with technical systems.
+The next step towards CIL in this area could be to incorporate the results of human puzzle-solving into the calculations and decisions of ML systems in order to proactively support humans (bi-directional way of inputs, see section~\ref{sec:intro}) in finding solutions (for example by excluding unpromising folds).
 
 
 \subsection{Industry and Manufacturing}
 The primary goal in manufacturing is to keep production up and running under almost all circumstances. 
 Even short downtimes of production lines result in high sales losses for companies.
 This is why it is important to keep an eye on the wear of work equipment, production lines and the condition of machines in general at all times.
-Current systems already use various ML techniques\notes{[MLinManu]} to cover these applications.
+Current systems already use various ML techniques\cite{Manu:wuest} to cover these applications.
 
-For CIL systems, it is conceivable that, in addition to the sensor data used by the devices to "measure" wear, to call in expert knowledge so that rare cases that are easily recognisable as a suspicious situation for humans, can be identified at an early stage by the whole system.
-In this process, a CIL system must assess at runtime which expert should be asked what and when in order 
+For CIL-systems, it is conceivable, in addition to the sensor data used by the devices to "measure" wear, to call in expert knowledge, so that rare cases that are easily recognisable as a suspicious situation for humans, can be identified at an early stage by the whole system.
+In this process, a CIL system must estimate at runtime which expert should be asked what and when in order 
 to achieve maximum information content.
 
 \section{Challenges and future directions}
-Since the field of Collaborative Interactive Learning is still a very new field of research, there is still a lot of 
+Since the area of Collaborative Interactive Learning is a very new field of research, there is still a lot of 
 research to be done in the areas of continuous knowledge acquisition 
 and evaluation from several heterogeneous sources (Internet, expert knowledge, etc.), 
-and interaction with multiple other agents (humans and other CIL systems), 
+as well as the interaction with multiple other agents (humans and other CIL systems), 
 especially when systems have to adapt to changing situations during their lifetime.
 
 Not only technical difficulties have to be overcome, but also social ones. In order to use ML techniques effectively, 
 at least a minimum amount of data has to be provided in order to be analyzed. To do this, we need to decide 
 to what extent we are willing to disclose our data for the benefits of CIL systems and ML in general.
-Inhibitions in human-machine communication and interaction must also be overcome for CIL systems to be used successfully.
-
-% An example of a floating figure using the graphicx package.
-% Note that \label must occur AFTER (or within) \caption.
-% For figures, \caption should occur after the \includegraphics.
-% Note that IEEEtran v1.7 and later has special internal code that
-% is designed to preserve the operation of \label within \caption
-% even when the captionsoff option is in effect. However, because
-% of issues like this, it may be the safest practice to put all your
-% \label just after \caption rather than within \caption{}.
-%
-% Reminder: the "draftcls" or "draftclsnofoot", not "draft", class
-% option should be used if it is desired that the figures are to be
-% displayed while in draft mode.
-%
-%\begin{figure}[!t]
-%\centering
-%\includegraphics[width=2.5in]{myfigure}
-% where an .eps filename suffix will be assumed under latex, 
-% and a .pdf suffix will be assumed for pdflatex; or what has been declared
-% via \DeclareGraphicsExtensions.
-%\caption{Simulation results for the network.}
-%\label{fig_sim}
-%\end{figure}
-
-% Note that the IEEE typically puts floats only at the top, even when this
-% results in a large percentage of a column being occupied by floats.
-
-
-% An example of a double column floating figure using two subfigures.
-% (The subfig.sty package must be loaded for this to work.)
-% The subfigure \label commands are set within each subfloat command,
-% and the \label for the overall figure must come after \caption.
-% \hfil is used as a separator to get equal spacing.
-% Watch out that the combined width of all the subfigures on a 
-% line do not exceed the text width or a line break will occur.
-%
-%\begin{figure*}[!t]
-%\centering
-%\subfloat[Case I]{\includegraphics[width=2.5in]{box}%
-%\label{fig_first_case}}
-%\hfil
-%\subfloat[Case II]{\includegraphics[width=2.5in]{box}%
-%\label{fig_second_case}}
-%\caption{Simulation results for the network.}
-%\label{fig_sim}
-%\end{figure*}
-%
-% Note that often IEEE papers with subfigures do not employ subfigure
-% captions (using the optional argument to \subfloat[]), but instead will
-% reference/describe all of them (a), (b), etc., within the main caption.
-% Be aware that for subfig.sty to generate the (a), (b), etc., subfigure
-% labels, the optional argument to \subfloat must be present. If a
-% subcaption is not desired, just leave its contents blank,
-% e.g., \subfloat[].
-
-
-% An example of a floating table. Note that, for IEEE style tables, the
-% \caption command should come BEFORE the table and, given that table
-% captions serve much like titles, are usually capitalized except for words
-% such as a, an, and, as, at, but, by, for, in, nor, of, on, or, the, to
-% and up, which are usually not capitalized unless they are the first or
-% last word of the caption. Table text will default to \footnotesize as
-% the IEEE normally uses this smaller font for tables.
-% The \label must come after \caption as always.
-%
-%\begin{table}[!t]
-%% increase table row spacing, adjust to taste
-%\renewcommand{\arraystretch}{1.3}
-% if using array.sty, it might be a good idea to tweak the value of
-% \extrarowheight as needed to properly center the text within the cells
-%\caption{An Example of a Table}
-%\label{table_example}
-%\centering
-%% Some packages, such as MDW tools, offer better commands for making tables
-%% than the plain LaTeX2e tabular which is used here.
-%\begin{tabular}{|c||c|}
-%\hline
-%One & Two\\
-%\hline
-%Three & Four\\
-%\hline
-%\end{tabular}
-%\end{table}
-
-
-% Note that the IEEE does not put floats in the very first column
-% - or typically anywhere on the first page for that matter. Also,
-% in-text middle ("here") positioning is typically not used, but it
-% is allowed and encouraged for Computer Society conferences (but
-% not Computer Society journals). Most IEEE journals/conferences use
-% top floats exclusively. 
-% Note that, LaTeX2e, unlike IEEE journals/conferences, places
-% footnotes above bottom floats. This can be corrected via the
-% \fnbelowfloat command of the stfloats package.
-
-
-% trigger a \newpage just before the given reference
-% number - used to balance the columns on the last page
-% adjust value as needed - may need to be readjusted if
-% the document is modified later
-%\IEEEtriggeratref{8}
-% The "triggered" command can be changed if desired:
-%\IEEEtriggercmd{\enlargethispage{-5in}}
-
-% references section
-
-% can use a bibliography generated by BibTeX as a .bbl file
-% BibTeX documentation can be easily obtained at:
-% http://mirror.ctan.org/biblio/bibtex/contrib/doc/
-% The IEEEtran BibTeX style support page is at:
-% http://www.michaelshell.org/tex/ieeetran/bibtex/
-%\bibliographystyle{IEEEtran}
-% argument is your BibTeX string definitions and bibliography database(s)
-%\bibliography{IEEEabrv,../bib/paper}
-%
-% <OR> manually copy in the resultant .bbl file
-% set second argument of \begin to the number of references
-% (used to reserve space for the reference number labels box)
-
+Inhibitions in human-machine communication and interaction must also be overcome for CIL systems to be used 
+successfully and productively.
 
 \begin{thebibliography}{1}
 \bibitem{ML:mitchell}
@@ -715,7 +492,7 @@ Inhibitions in human-machine communication and interaction must also be overcome
 \bibitem{DisciplineOfML:mitchell}
     Mitchell, T. M. (2006). The discipline of machine learning (Vol. 9). Carnegie Mellon University, School of Computer Science, Machine Learning Department.
 \bibitem{Prog2:bachmaier}
-    Bachmaier, C. (2017). Lecture. Programming II\@. Faculty for Informatics and Mathematics, University of Passau, Germany.\notes{check this}
+    Bachmaier, C. (2017). Lecture. Programming II\@. Faculty for Informatics and Mathematics, University of Passau, Germany.
 \bibitem{CIL:sick}
     Sick, B., Oeste-Rei{\ss}, S., Schmidt, A., Tomforde, S., \& Zweig, A. K. (2018). Collaborative Interactive Learning. Informatik-Spektrum, 41(1), 52-55.
 \bibitem{Structure:corne}
@@ -730,8 +507,17 @@ Inhibitions in human-machine communication and interaction must also be overcome
     M{\"u}ller-Schloer, C., von der Malsburg, C., \& W{\"u}rt, R. P. (2004). Organic computing. Informatik-Spektrum, 27(4), 332-336.
 \bibitem{Organic:schmeck}
     Schmeck, H. (2005, May). Organic computing-a new vision for distributed embedded systems. In Object-Oriented Real-Time Distributed Computing, 2005. ISORC 2005. Eighth IEEE International Symposium on (pp. 201-203). IEEE.
+\bibitem{DJ:frankowski}
+    Zhou, C., Frankowski, D., Ludford, P., Shekhar, S., \& Terveen, L. (2004, November). Discovering personal gazetteers: an interactive clustering approach. In Proceedings of the 12th annual ACM international workshop on Geographic information systems (pp. 266-273). ACM.
+\bibitem{YouTube:pasca}
+    Toderici, G., Aradhye, H., Pasca, M., Sbaiz, L., \& Yagnik, J. (2010, June). Finding meaning on youtube: Tag recommendation and category discovery. In Computer Vision and Pattern Recognition (CVPR), 2010 IEEE Conference on (pp. 3447-3454). IEEE.
 \bibitem{Foldit:web}
-    The Science Behind Foldit. (n.d.). Retrieved June 29, 2018, from https://fold.it/portal/info/about. University of Washington, Departments of Computer Science \& Engineering and Biochemistry.
+    The Science Behind Foldit. (n.d.). University of Washington, Departments of Computer Science \& Engineering and Biochemistry. Retrieved from \url{https://fold.it/portal/info/about} on June 29, 2018. 
+\bibitem{Foldit:results}
+    Boyle, A., (2011, September). Gamers solve molecular puzzle that baffled scientists. Cosmic Log.\\
+    Retrieved from \url{https://cosmiclog.nbcnews.com/_news/2011/09/18/7802623-gamers-solve-molecular-puzzle-that-baffled-scientists} on June 29, 2018.
+\bibitem{Manu:wuest}
+    Wuest, T., Weimer, D., Irgens, C., \& Thoben, K. D. (2016). Machine learning in manufacturing: advantages, challenges, and applications. Production \& Manufacturing Research, 4(1), 23-45.
 \end{thebibliography}
 
 
