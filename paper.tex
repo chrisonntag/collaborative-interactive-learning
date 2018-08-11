@@ -241,7 +241,6 @@ approaches in comparison with CIL and outlines possible areas of application.
 
 
 \section{Introduction}\label{sec:intro}
-\notes{[Introduction is too long, the examples shouldn't be in the introduction in detail.--> extra section]}
 As with most concepts, there is no canonical 
 definition for the term \textit{Machine Learning (ML)} but at its most basic form it 
 can be described as algorithms that learn from a given set of training examples 
@@ -258,44 +257,10 @@ Since ML scenarios like \textit{supervised}, \textit{unsupervised} and
 \textit{semi-supervised} learning, which we will cover later, are heavily data-driven, 
 the internet with its massive amount of data has contributed to the further development 
 of research in the area of fully automated learning algorithms. Today, we can see the 
-results in a variety of applications\cite{FoundationsOfML:mohri}\cite{DisciplineOfML:mitchell}, 
-not limited to the list below.
-\begin{itemize}
-    \item \textit{Text classification, Natural Language Processing (NLP)}. 
-        Many current mail programs have built-in spam detection which originally used
-        simple regular expressions in order to detect phrases commonly used in spam mails.
-        With state-of-the-art ML techniques it is not only possible for a mail program to 
-        query for a number of words but to recognise patterns of how spam mails are constructed and 
-        to adapt itself to new types of spam.
-    \item \textit{Speech recognition}. 
-        Most commercial applications for speech recognition also use ML to train itself to 
-        recognise a user's speech input in order to perform further semantic analysis on
-        that data.
-    \item \textit{Image recognition, Optical Character Recognition (OCR)}.
-        Machine Learning methods have also been successfully applied in domains where it's 
-        important to extract information from images such as detecting and classifying 
-        objects or recognizing handwritten characters. Image 
-        recognition and OCR are therefore for example used in medical diagnosis to 
-        detect cancer on radiographs, in autonomous vehicles to detect obstacles and to 
-        stay on track or in post-offices to sort envelopes with hand-written addresses
-        \cite{DisciplineOfML:mitchell}.
-    \item \textit{Games}.
-        Computer Games usually offer a Multiplayer mode where a user can interact and 
-        play the game even without a human opponent. For games with a small number of 
-        possible moves after each turn, and therefore a relatively small game tree containing 
-        all possible moves, the minimax algorithm\cite{Prog2:bachmaier} can be sufficient. 
-        It figures out which next move would minimize the worst-case scenario for all subsequent 
-        moves. Therefore, it needs to know all possible moves, which can easily become computationally 
-        infeasible for games like Chess or AlphaGo where a general move faces between 35 (Chess) and 
-        250 (AlphaGo) possible subsequent game states.
-        In order to still have challenging opponents, modern Games are using ML to gain experience 
-        by themselves.
-    \item \textit{Search engines, Recommendation systems}.
-        Nearly all current search machines use ML in one fashion or another. They mainly use these 
-        techniques for \textit{(1) User classification}\cite{DisciplineOfML:mitchell} in order to offer personalized 
-        search results and for \textit{(2) Query classification} in order to ``understand' a 
-        users query and to provide further meaningful information.
-\end{itemize}
+results in a variety of applications\cite{FoundationsOfML:mohri}\cite{DisciplineOfML:mitchell} 
+described in more detail in Section~\ref{sec:algos}.
+
+% List with current ML applications
 
 Despite the successful application of ML in a lot of fields, most of these examples 
 need a sufficient amount of labeled training data ($x_i$ with assigned $y_i$) in order to make 
@@ -308,16 +273,18 @@ In addition, a machine learning algorithm's prediction is solely based on the tr
 has seen before. One might argue that human decisions are also only based on experience having been
 made since their childhood but humans are often still superior to most algorithms in terms of 
 the instinctive interpretation of complex patterns. Furthermore, they can learn to recognize 
-structural patterns from very few training data.
+structural patterns from very few training data. Hence, a new approach is needed in order to 
+counteract the disadvantages of classical ML\@.
+This article gives a brief introduction on possible areas of application for 
+\textit{Collaborative Interactive Learning (CIL)}. It starts with an overview of classical 
+machine learning scenarios, discussing where they are facing limits, describing the relation 
+to Organic Computing and motivating the use of CIL\@. It then lists possible applications 
+and concludes with a view on future research interests.
 
-\begin{figure}[!h]
-\centering
-\includegraphics[width=3.5in]{images/CIL}
-\caption{Collaborative Interactive Learning.}
-\label{fig:CIL}
-\end{figure}
 
-Hence, \textit{Collaborative Interactive Learning (CIL)} includes domain experts (humans) 
+\section{Collaborative Interactive Learning}\label{sec:cil}
+\notes{[More detail.]}
+CIL includes domain experts (humans) 
 and other CIL systems in the decision/prediction making process as shown in 
 Figure~\ref{fig:CIL}. The relatively new term describes a new 
 generation of systems with
@@ -328,15 +295,16 @@ generation of systems with
         in order to improve the own knowledge and the one of other entities in a 
         bi-directional way\cite{CIL:sick}.
 \end{itemize}
-
-This article gives a brief introduction on possible areas of application for the CIL-approach. 
-It starts with an overview of classical machine learning scenarios, discussing where they are 
-facing limits, describing the relation to Organic Computing and motivating the use of CIL\@. 
-It then lists possible applications and concludes 
-with a view on future research interests.
+\begin{figure}[!h]
+\centering
+\includegraphics[width=3.5in]{images/CIL}
+\caption{Interaction between heterogeneous systems in CIL.}
+\label{fig:CIL}
+\end{figure}
 
 
 \section{Algorithmic Foundations}
+\label{sec:algos}
 Before we take a closer look at the applications and challenges of CIL, let's first consider the 
 following existing machine learning strategies and algorithms. As already mentioned above, 
 there is a multitude of definitions for the term ML\@. But primarily, Arthur Samuel 
@@ -347,8 +315,8 @@ specifically programmed to do so, is still valid today\cite{MLStudiesUsingChecke
 Over the last decades, ML has developed significantly and has become an area of
 research interest for many different actors, which makes it difficult to divide learning 
 strategies into several categories. Different researchers are using different approaches 
-for that\cite{FoundationsOfML:mohri}\cite{Structure:corne}. 
-In the following section I want to present five strategies\cite{FoundationsOfML:mohri}.
+\cite{FoundationsOfML:mohri}\cite{Structure:corne}. 
+However, in the following section I want to present five common strategies\cite{FoundationsOfML:mohri}.
 \notes{[Add examples for each classification.]}
 
 \subsection{Supervised learning}
@@ -386,6 +354,44 @@ information as in the method of supervised learning. To achieve this,
 the learner needs a selection strategy\cite{ActiveToDedicated:calma} that decides whether 
 an action has enough information content to label a data point or not.
 \notes{[too short.]}
+
+\begin{itemize}
+    \item \textit{Text classification, Natural Language Processing (NLP)}. 
+        Many current mail programs have built-in spam detection which originally used
+        simple regular expressions in order to detect phrases commonly used in spam mails.
+        With state-of-the-art ML techniques it is not only possible for a mail program to 
+        query for a number of words but to recognise patterns of how spam mails are constructed and 
+        to adapt itself to new types of spam.
+    \item \textit{Speech recognition}. 
+        Most commercial applications for speech recognition also use ML to train itself to 
+        recognise a user's speech input in order to perform further semantic analysis on
+        that data.
+    \item \textit{Image recognition, Optical Character Recognition (OCR)}.
+        Machine Learning methods have also been successfully applied in domains where it's 
+        important to extract information from images such as detecting and classifying 
+        objects or recognizing handwritten characters. Image 
+        recognition and OCR are therefore for example used in medical diagnosis to 
+        detect cancer on radiographs, in autonomous vehicles to detect obstacles and to 
+        stay on track or in post-offices to sort envelopes with hand-written addresses
+        \cite{DisciplineOfML:mitchell}.
+    \item \textit{Games}.
+        Computer Games usually offer a Multiplayer mode where a user can interact and 
+        play the game even without a human opponent. For games with a small number of 
+        possible moves after each turn, and therefore a relatively small game tree containing 
+        all possible moves, the minimax algorithm\cite{Prog2:bachmaier} can be sufficient. 
+        It figures out which next move would minimize the worst-case scenario for all subsequent 
+        moves. Therefore, it needs to know all possible moves, which can easily become computationally 
+        infeasible for games like Chess or AlphaGo where a general move faces between 35 (Chess) and 
+        250 (AlphaGo) possible subsequent game states.
+        In order to still have challenging opponents, modern Games are using ML to gain experience 
+        by themselves.
+    \item \textit{Search engines, Recommendation systems}.
+        Nearly all current search machines use ML in one fashion or another. They mainly use these 
+        techniques for \textit{(1) User classification}\cite{DisciplineOfML:mitchell} in order to offer personalized 
+        search results and for \textit{(2) Query classification} in order to ``understand' a 
+        users query and to provide further meaningful information.
+\end{itemize}
+
 
 
 \section{When using CIL is helpful}\label{AdvantageOfCIL}
