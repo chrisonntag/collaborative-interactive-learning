@@ -1,4 +1,4 @@
-\documentclass[conference,compsoc]{IEEEtran}
+\documentclass[conference]{IEEEtran}
 % Some/most Computer Society conferences require the compsoc mode option,
 % but others may want the standard conference format.
 %
@@ -199,7 +199,7 @@
 
 
 \begin{document}
-\title{Resolving Limits Faced by Classical Machine Learning Approaches:\\Areas of Application for 
+\title{Resolving Limits Faced by Classical Machine Learning Approaches: Areas of Application for 
 Collaborative Interactive Learning Techniques}
 
 
@@ -233,7 +233,7 @@ domains. However, robust and trustworthy results are mandatory in a lot of
 applications like health informatics or autonomous vehicles. 
 Therefore, systems are needed that interactively integrate knowledge from 
 various experts, which can be collaborating humans or machines, in order 
-to continuously improve results over a systems whole lifetime: So called 
+to continuously improve results over a system's whole lifetime: So called 
 \textit{Collaborative Interactive Learning (CIL)} systems.
 This paper contributes in presenting an overview of classical ML approaches 
 in comparison with CIL and outlines possible areas of application. 
@@ -241,6 +241,8 @@ in comparison with CIL and outlines possible areas of application.
 
 
 \section{Introduction}\label{sec:intro}
+\notes{[Introduce abbreviations again.]}
+\notes{[Introduction is too long, the examples shouldn't be in the introduction in detail.--> extra section]}
 As with most concepts, there is no canonical 
 definition for the term \textit{Machine Learning} but at its most basic form it 
 can be described as algorithms that learn from a given set of training examples 
@@ -272,16 +274,16 @@ not limited to the list below.
         that data.
     \item \textit{Image recognition, OCR}.
         Machine Learning methods have also been successfully applied in domains where it's 
-        important to extract information from images such as detecting and classifiying 
+        important to extract information from images such as detecting and classifying 
         objects or recognizing handwritten characters. Image 
         recognition and OCR are therefore for example used in medical diagnosis to 
         detect cancer on radiographs, in autonomous vehicles to detect obstacles and to 
         stay on track or in post-offices to sort envelopes with hand-written addresses
         \cite{DisciplineOfML:mitchell}.
     \item \textit{Games}.
-        Computer Games ususally offer a Multiplayer mode where a user can interact and 
+        Computer Games usually offer a Multiplayer mode where a user can interact and 
         play the game even without a human opponent. For games with a small number of 
-        possible moves after each turn, and therefore a realtively small game tree containing 
+        possible moves after each turn, and therefore a relatively small game tree containing 
         all possible moves, the minimax algorithm\cite{Prog2:bachmaier} can be sufficient. 
         It figures out which next move would minimize the worst-case scenario for all subsequent 
         moves. Therefore, it needs to know all possible moves, which can easily become computationally 
@@ -347,7 +349,8 @@ Over the last decades, ML has developed significantly and has become an area of
 research interest for many different actors, which makes it difficult to divide learning 
 strategies into several categories. Different researchers are using different approaches 
 for that\cite{FoundationsOfML:mohri}\cite{Structure:corne}. 
-In the following section i want to present five strategies\cite{FoundationsOfML:mohri}.
+In the following section I want to present five strategies\cite{FoundationsOfML:mohri}.
+\notes{[Add examples for each classification.]}
 
 \subsection{Supervised learning}
 Basically supervised learning is the way of learning from labeled examples and making predictions 
@@ -360,19 +363,22 @@ In contrast to supervised learning, the learner here receives only
 unlabeled training data and makes predictions for all unseen points. This technique is 
 relatively similar to the way infants learn new things (e.g.\ learning a language) and 
 is used, for example, in clustering data into groups, which we will discuss later\cite{BrainInf:holzinger}.
+\notes{[Maybe Clustering as an example.]}
 
 \subsection{Semi-supervised learning}
 As the name suggests, the learner receives training data, which consists of both 
 labeled as well as unlabelled data and makes predictions for all unseen points.
 This technique is mainly used in areas where data is easily accessible, 
 but finding the right label is expensive.
+\notes{[Example needed.]}
 
 \subsection{Reinforcement Learning}\label{reinforcement}
-Reinforcement learning is probably the oldest approach and a potentially important one for CIL\@. 
-The learner constantly interacts with his environment to gain new information. For each action 
-he gets a reward. His goal is to maximize his reward over several repetitions. 
+Reinforcement learning is probably the oldest approach and a potentially important one for CIL\@.\notes{[why?]} 
+The learner constantly interacts with its environment to gain new information. For each action 
+he gets a reward. The goal of the learner is to maximize its reward over several repetitions. 
 However, he is in conflict with using the information which has already been discovered by his actions 
 or with getting more information through further actions.
+\notes{[too short.]}
 
 \subsection{Active Learning}\label{active}
 The goal of Active Learning is to interact with other agents in a clever way in order 
@@ -380,9 +386,10 @@ to label already existing data points and thus achieve a similar performance at 
 information as in the method of supervised learning. To achieve this, 
 the learner needs a selection strategy\cite{ActiveToDedicated:calma} that decides whether 
 an action has enough information content to label a data point or not.
+\notes{[too short.]}
 
 
-\section{When is using CIL helpful?}\label{AdvantageOfCIL}
+\section{When using CIL is helpful}\label{AdvantageOfCIL}
 In established ML systems, a separate model must be developed and trained in advance for 
 each specific application. ML systems therefore have a relatively narrow application frame. 
 The idea behind CIL systems is that they learn, self-organize and improve knowledge throughout their lives. 
@@ -398,6 +405,7 @@ an own contribution to actively support human collaboration processes by
 recognising their wishes and needs and reacting accordingly\cite{CIL:sick}.
 
 \section{Classification of CIL in Organic Computing}
+\notes{[The author could introduce the domain of Organic Computing a little more in detail, e.g.\ by describing the self-x properties.]}
 CIL systems can be understood as organically structured information technology
 which fulfill so-called self-x-properties\cite{Organic:schloer}\cite{Organic:schmeck}.
 They
@@ -408,14 +416,17 @@ They
 \end{itemize}
 Depending on which methods of ML are used, CIL systems are also more or less self-explanatory 
 during development\cite{Organic:schloer}.
+\notes{[why?]}
 
 \section{Application examples}
 In the following we will discuss some interesting application examples.
 
 \subsection{Clustering}
+\notes{[Clustering is not really a domain on it's own but can be used to solve problems in health domain, etc.\ pp.]}
+\notes{[Clarify the k-Means Algorithm by pointing out the steps.]}
 Clustering is the perfect example of a starting point without sufficient information about an amount of data. 
 The basic goal here is to divide a data set into homogeneous groups of individual data points in order to create structure in it.
-Data points must be checked for similarity in this context in some way.
+In this context data points must be checked for similarity in some way.
 Clustering is used, for example, in most recommendation systems of popular internet applications (Netflix movie recommendations, YouTube Video Tags\cite{YouTube:pasca}) to group similar tags or find groups of people with a similar taste in movies.
 Furthermore, clustering is used to identify communities in social networks, for example for target-advertising, or to cluster location-data so that "important places" of a person can be identified\cite{DJ:frankowski}.
 
