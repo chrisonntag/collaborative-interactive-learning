@@ -283,25 +283,30 @@ and concludes with a view on future research interests.
 
 
 \section{Collaborative Interactive Learning}\label{sec:cil}
-\notes{[More detail.]}
-CIL includes domain experts (humans) 
-and other CIL systems in the decision/prediction making process as shown in 
-Figure~\ref{fig:CIL}. The relatively new term describes a new 
+The term \textit{Collaborative Interactive Learning (CIL)} is a relatively new concept of systems which 
+includes other domain experts (humans) and CIL systems in the decision/prediction making process 
+as shown in Figure~\ref{fig:CIL}. It describes the vision of a new 
 generation of systems with
 \begin{itemize}
     \item lifelong learning capabilities in order to continuously improve its 
-        knowledge base
+        knowledge base (\textit{learning})
     \item and the ability to exchange knowledge with other CIL systems as well as humans 
-        in order to improve the own knowledge and the one of other entities in a 
-        bi-directional way\cite{CIL:sick}.
+        in order to improve the own knowledge and learning process and the one of other entities in a 
+        bi-directional way (\textit{interactive}, \textit{collaborative})\cite{CIL:sick}.
 \end{itemize}
 \begin{figure}[!h]
 \centering
 \includegraphics[width=3.5in]{images/CIL}
-\caption{Interaction between heterogeneous systems in CIL.}
+\caption{Interaction between heterogeneous systems in CIL.\notes{own work}}
 \label{fig:CIL}
 \end{figure}
-
+So the main difference to classical ML is the possibilty to adapt and optimize itself during run-time 
+towards new situations without having been specifically trained for these use-cases whereas classical ML 
+systems have had to be fed with a sufficient amount of relevant training data\cite{CIL:sick}\cite{Organic:schloer}.
+Furthermore, CIL systems interact with their environment in order to not rely on a single training data set. 
+They collect data from several other systems (including humans) to validate already existing information and to 
+gather additional data from other sources. In this way, CIL systems can be used in a lot of application areas where 
+environments are constantly changing or training data is rarely available.
 
 \section{Algorithmic Foundations}
 \label{sec:algos}
@@ -317,26 +322,37 @@ research interest for many different actors, which makes it difficult to divide 
 strategies into several categories. Different researchers are using different approaches 
 \cite{FoundationsOfML:mohri}\cite{Structure:corne}. 
 However, in the following section I want to present five common strategies\cite{FoundationsOfML:mohri}.
-\notes{[Add examples for each classification.]}
 
 \subsection{Supervised learning}
 Basically supervised learning is the way of learning from labeled examples and making predictions 
 for all unseen points. This is the most basic concept of ML and used in a variety of applications 
 where labeled data is easy to obtain. The spam mail example discussed in the introduction is a 
 case of supervised learning.
+Many current mail programs have built-in spam detection which originally used
+simple regular expressions in order to detect phrases commonly used in spam mails.
+With state-of-the-art ML techniques it is not only possible for a mail program to 
+query for a number of words but to recognise patterns of how spam mails are constructed and 
+to adapt itself to new types of spam.
 
 \subsection{Unsupervised learning}
-In contrast to supervised learning, the learner here receives only 
-unlabeled training data and makes predictions for all unseen points. This technique is 
+In contrast to supervised learning, the learner receives only 
+unlabeled training data and makes predictions for all unseen points in this concept. This technique is 
 relatively similar to the way infants learn new things (e.g.\ learning a language) and 
 is used, for example, in clustering data into groups, which we will discuss later\cite{BrainInf:holzinger}.
-\notes{[Maybe Clustering as an example.]}
+Furthermore, nearly all current search machines use unsupervised learning strategies in one fashion or another. 
+They mainly use these techniques for \textit{(1) User classification}\cite{DisciplineOfML:mitchell} in order to offer personalized 
+search results and for \textit{(2) Query classification} in order to ``understand' a 
+users query and to provide further meaningful information. 
+\notes{[not sure if unsupervised; clustering and dimensionality reduction however is.]}
 
 \subsection{Semi-supervised learning}
 As the name suggests, the learner receives training data, which consists of both 
 labeled as well as unlabelled data and makes predictions for all unseen points.
 This technique is mainly used in areas where data is easily accessible, 
 but finding the right label is expensive.
+Most commercial applications for speech recognition are using this technique to train itself to 
+recognise a user's speech input in order to perform further semantic analysis on
+that data. \notes{[not sure if unsupervised]}
 \notes{[Example needed.]}
 
 \subsection{Reinforcement Learning}\label{reinforcement}
@@ -356,16 +372,6 @@ an action has enough information content to label a data point or not.
 \notes{[too short.]}
 
 \begin{itemize}
-    \item \textit{Text classification, Natural Language Processing (NLP)}. 
-        Many current mail programs have built-in spam detection which originally used
-        simple regular expressions in order to detect phrases commonly used in spam mails.
-        With state-of-the-art ML techniques it is not only possible for a mail program to 
-        query for a number of words but to recognise patterns of how spam mails are constructed and 
-        to adapt itself to new types of spam.
-    \item \textit{Speech recognition}. 
-        Most commercial applications for speech recognition also use ML to train itself to 
-        recognise a user's speech input in order to perform further semantic analysis on
-        that data.
     \item \textit{Image recognition, Optical Character Recognition (OCR)}.
         Machine Learning methods have also been successfully applied in domains where it's 
         important to extract information from images such as detecting and classifying 
@@ -385,11 +391,6 @@ an action has enough information content to label a data point or not.
         250 (AlphaGo) possible subsequent game states.
         In order to still have challenging opponents, modern Games are using ML to gain experience 
         by themselves.
-    \item \textit{Search engines, Recommendation systems}.
-        Nearly all current search machines use ML in one fashion or another. They mainly use these 
-        techniques for \textit{(1) User classification}\cite{DisciplineOfML:mitchell} in order to offer personalized 
-        search results and for \textit{(2) Query classification} in order to ``understand' a 
-        users query and to provide further meaningful information.
 \end{itemize}
 
 
@@ -422,6 +423,12 @@ They
 Depending on which methods of ML are used, CIL systems are also more or less self-explanatory 
 during development\cite{Organic:schloer}.
 \notes{[why?]}
+
+\subsection{Self-Configuration}
+\subsection{Self-Optimization}
+\subsection{Self- Healing and Protecting}
+\subsection{Self-Explanatory}
+
 
 \section{Application examples}
 In the following we will discuss some interesting application examples.
@@ -474,7 +481,8 @@ The aim of the game is to determine the optimal folding and thus the "most comfo
 Since the structure determines the function of a protein\cite{Foldit:web}, new forms can also be used to treat diseases such as AIDS or cancer more effectively.
 
 So we already see a system in this field that at least involves the human being as a collective form of knowledge acquisition in the solution of complex problems, even if not directly with technical systems.
-The next step towards CIL in this area could be to incorporate the results of human puzzle-solving into the calculations and decisions of ML systems in order to proactively support humans (bi-directional way of inputs, see section~\ref{sec:intro}) in finding solutions (for example by excluding unpromising folds).
+The next step towards CIL in this area could be to incorporate the results of human puzzle-solving into the calculations and decisions of ML systems in order to proactively support humans (bi-directional way of inputs, see Section~\ref{sec:intro}) in finding solutions 
+for example by excluding unpromisingfls.
 
 
 \subsection{Industry and Manufacturing}
