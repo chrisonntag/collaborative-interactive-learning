@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.6)  21 AUG 2018 22:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.6)  22 AUG 2018 11:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -329,12 +329,12 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 ]
-Underfull \hbox (badness 7925) in paragraph at lines 375--383
+Underfull \hbox (badness 7925) in paragraph at lines 376--384
 []\OT1/ptm/m/it/10 Image recog-ni-tion, Op-tical Char-ac-ter Recog-ni-tion
  []
 
 [2 <./images/CIL.pdf>] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 541--543
+Underfull \hbox (badness 10000) in paragraph at lines 544--546
 \OT1/ptm/m/n/8 Retrieved from $https : / / cosmiclog . nbcnews . com / []news /
  2011 / 09 / 18 /
  []
@@ -375,7 +375,7 @@ exlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/201
 6/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2016/texmf-d
 ist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/
 type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (5 pages, 172580 bytes).
+Output written on paper.pdf (5 pages, 173358 bytes).
 PDF statistics:
  85 PDF objects out of 1000 (max. 8388607)
  60 compressed objects within 1 object stream

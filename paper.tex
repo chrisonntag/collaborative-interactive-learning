@@ -235,7 +235,7 @@ Therefore, systems are needed that interactively integrate knowledge from
 various experts, which can be collaborating humans or machines, in order 
 to continuously improve results over a system's whole lifetime: So called 
 \textit{Collaborative Interactive Learning (CIL)} systems.
-This paper contributes in presenting an overview of classical Machine Learning 
+This paper contributes in presenting an overview of classical \textit{Machine Learning} 
 approaches in comparison with CIL and outlines possible areas of application. 
 \end{abstract}
 
@@ -325,9 +325,9 @@ However, in the following section I want to present five common strategies\cite{
 
 \subsection{Supervised learning}
 Basically supervised learning is the way of learning from labeled examples and making predictions 
-for all unseen points. This is the most basic concept of ML and used in a variety of applications 
-where labeled data is easy to obtain. The spam mail example discussed in the introduction is a 
-case of supervised learning.
+for all unseen points. This is the most basic concept of ML and is used in a variety of applications 
+where labeled data is easy to obtain. Spam mail detection for instance is a case where supervised learning 
+techniques are - among others - used.
 Many current mail programs have built-in spam detection which originally used
 simple regular expressions in order to detect phrases commonly used in spam mails.
 With state-of-the-art ML techniques it is not only possible for a mail program to 
@@ -341,22 +341,24 @@ relatively similar to the way infants learn new things (e.g.\ learning a languag
 is used, for example, in clustering data into groups, which we will discuss later\cite{BrainInf:holzinger}.
 Furthermore, nearly all current search machines use unsupervised learning strategies in one fashion or another. 
 They mainly use these techniques for \textit{(1) User classification}\cite{DisciplineOfML:mitchell} in order to offer personalized 
-search results and for \textit{(2) Query classification} in order to ``understand' a 
+search results and for \textit{(2) Query classification} in order to ``understand'' a 
 users query and to provide further meaningful information. 
 \notes{[not sure if unsupervised; clustering and dimensionality reduction however is.]}
 
 \subsection{Semi-supervised learning}
 As the name suggests, the learner receives training data, which consists of both 
-labeled as well as unlabelled data and makes predictions for all unseen points.
+labeled as well as unlabeled data. Typically more unlabeled than labeled data.
 This technique is mainly used in areas where data is easily accessible, 
-but finding the right label is expensive.
+but finding the right label is hard.
 Most commercial applications for speech recognition are using this technique to train itself to 
 recognise a user's speech input in order to perform further semantic analysis on
-that data. \notes{[not sure if unsupervised]}
-\notes{[Example needed.]}
+that data. Obtaining a sufficient amount of labeled data, for example the transcriptions of 
+recorded audio files, would be expensive. Thus, unlabeled together with labeled data is being used 
+to train a learner in a meaningful way.
 
 \subsection{Reinforcement Learning}\label{reinforcement}
-Reinforcement learning is probably the oldest approach and a potentially important one for CIL\@.\notes{[why?]} 
+Reinforcement learning is probably the oldest approach and a potentially important one for CIL because 
+it constantly tries to reinforce its learning process and improve its behavior.\notes{[behavior vs behaviour]} 
 The learner constantly interacts with its environment to gain new information. For each action 
 he gets a reward. The goal of the learner is to maximize its reward over several repetitions. 
 However, he is in conflict with using the information which has already been discovered by his actions 
@@ -365,7 +367,7 @@ or with getting more information through further actions.
 
 \subsection{Active Learning}\label{active}
 The goal of Active Learning is to interact with other agents in a clever way in order 
-to label already existing data points and thus achieve a similar performance at less available 
+to label already existing data points and thus achieve a similar performance with less available 
 information as in the method of supervised learning. To achieve this, 
 the learner needs a selection strategy\cite{ActiveToDedicated:calma} that decides whether 
 an action has enough information content to label a data point or not.
@@ -412,22 +414,22 @@ recognising their wishes and needs and reacting accordingly\cite{CIL:sick}.
 
 \section{Classification of CIL in Organic Computing}
 \notes{[The author could introduce the domain of Organic Computing a little more in detail, e.g.\ by describing the self-x properties.]}
-CIL systems can be understood as organically structured information technology
-which fulfill so-called self-x-properties\cite{Organic:schloer}\cite{Organic:schmeck}.
-They
-\begin{itemize}
-    \item configure themselves in the sense that they are not aligned by developers to an application case,
-    \item optimize themselves by applying various strategies of ML to expand their knowledge,
-    \item heal and protect themselves because cooperation with other systems is possible and desired.
-\end{itemize}
+CIL systems can be described in many ways as \textit{organic}. In general, systems are being called organic, 
+if they fulfill so-called self-x-properties\cite{Organic:schloer}\cite{Organic:schmeck}.
+
+\subsection{Self-Configuration}
+They configure themselves in the sense that they are not aligned by developers to an application case.
+
+\subsection{Self-Optimization}
+They optimize themselves by applying various strategies of ML to expand their knowledge.
+
+\subsection{Self- Healing and Protecting}
+They heal and protect themselves because cooperation with other systems is possible and desired.
+
+\subsection{Self-Explanation}
 Depending on which methods of ML are used, CIL systems are also more or less self-explanatory 
 during development\cite{Organic:schloer}.
 \notes{[why?]}
-
-\subsection{Self-Configuration}
-\subsection{Self-Optimization}
-\subsection{Self- Healing and Protecting}
-\subsection{Self-Explanatory}
 
 
 \section{Application examples}
@@ -439,8 +441,10 @@ In the following we will discuss some interesting application examples.
 Clustering is the perfect example of a starting point without sufficient information about an amount of data. 
 The basic goal here is to divide a data set into homogeneous groups of individual data points in order to create structure in it.
 In this context data points must be checked for similarity in some way.
-Clustering is used, for example, in most recommendation systems of popular internet applications (Netflix movie recommendations, YouTube Video Tags\cite{YouTube:pasca}) to group similar tags or find groups of people with a similar taste in movies.
-Furthermore, clustering is used to identify communities in social networks, for example for target-advertising, or to cluster location-data so that "important places" of a person can be identified\cite{DJ:frankowski}.
+Clustering is used, for example, in most recommendation systems of popular internet applications 
+(\textit{Netflix} movie recommendations, \textit{YouTube} Video Tags\cite{YouTube:pasca}) to group similar tags or find groups 
+of people with a similar taste in movies.
+Furthermore, clustering can be used to identify communities in social networks, for example for target-advertising, or to cluster location-data so that "important places" of a person can be identified\cite{DJ:frankowski}.
 
 Unfortunately, real-world data in these areas is often unclean, contains false or unwanted data and is often present in 
 dimensions $>$3, so that people alone, who are otherwise very good at recognizing similarities in dimensions $\le3$, are dependent on ML and vice-versa.
