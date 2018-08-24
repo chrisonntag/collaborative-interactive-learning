@@ -297,16 +297,20 @@ generation of systems with
 \begin{figure}[!h]
 \centering
 \includegraphics[width=3.5in]{images/CIL}
-\caption{Interaction between heterogeneous systems in CIL.\notes{own work}}
+\caption{Interaction between heterogeneous systems in CIL.}
 \label{fig:CIL}
 \end{figure}
-So the main difference to classical ML is the possibilty to adapt and optimize itself during run-time 
-towards new situations without having been specifically trained for these use-cases whereas classical ML 
+So the main difference to classical ML is the possibilty to adapt and optimise itself during run-time 
+towards new situations without having been specifically trained for these use-cases, whereas classical ML 
 systems have had to be fed with a sufficient amount of relevant training data\cite{CIL:sick}\cite{Organic:schloer}.
 Furthermore, CIL systems interact with their environment in order to not rely on a single training data set. 
-They collect data from several other systems (including humans) to validate already existing information and to 
+They collect data from several other sources (including humans) to validate already existing information and to 
 gather additional data from other sources. In this way, CIL systems can be used in a lot of application areas where 
 environments are constantly changing or training data is rarely available.
+In general, we can still distinguish between \textit{dedicated} (concentrating mostly on one defined learning process, 
+other interacting agents are largely human experts) and \textit{opportunistic} CIL (changing environments, heterogeneous 
+sources of information)\cite{CIL:sick}, 
+but we want to concentrate on general areas of application in this paper.
 
 \section{Algorithmic Foundations}
 \label{sec:algos}
@@ -333,6 +337,14 @@ simple regular expressions in order to detect phrases commonly used in spam mail
 With state-of-the-art ML techniques it is not only possible for a mail program to 
 query for a number of words but to recognise patterns of how spam mails are constructed and 
 to adapt itself to new types of spam.
+Supervised Learning methods have also been successfully applied in domains where it's 
+important to extract information from images such as detecting and classifying 
+objects or recognizing handwritten characters. Image 
+recognition and OCR are therefore for example used in medical diagnosis to 
+detect cancer on radiographs, in autonomous vehicles to detect obstacles and to 
+stay on track or in post-offices to sort envelopes with hand-written addresses
+\cite{DisciplineOfML:mitchell}. 
+
 
 \subsection{Unsupervised learning}
 In contrast to supervised learning, the learner receives only 
@@ -340,10 +352,9 @@ unlabeled training data and makes predictions for all unseen points in this conc
 relatively similar to the way infants learn new things (e.g.\ learning a language) and 
 is used, for example, in clustering data into groups, which we will discuss later\cite{BrainInf:holzinger}.
 Furthermore, nearly all current search machines use unsupervised learning strategies in one fashion or another. 
-They mainly use these techniques for \textit{(1) User classification}\cite{DisciplineOfML:mitchell} in order to offer personalized 
-search results and for \textit{(2) Query classification} in order to ``understand'' a 
+They mainly use these techniques for \textit{(1) Ranking}, \textit{(2) User classification}\cite{DisciplineOfML:mitchell} 
+in order to offer personalized search results and for \textit{(3) Query classification} in order to ``understand'' a 
 users query and to provide further meaningful information. 
-\notes{[not sure if unsupervised; clustering and dimensionality reduction however is.]}
 
 \subsection{Semi-supervised learning}
 As the name suggests, the learner receives training data, which consists of both 
@@ -358,43 +369,31 @@ to train a learner in a meaningful way.
 
 \subsection{Reinforcement Learning}\label{reinforcement}
 Reinforcement learning is probably the oldest approach and a potentially important one for CIL because 
-it constantly tries to reinforce its learning process and improve its behavior.\notes{[behavior vs behaviour]} 
-The learner constantly interacts with its environment to gain new information. For each action 
-he gets a reward. The goal of the learner is to maximize its reward over several repetitions. 
+it constantly tries to reinforce its learning process and improve its behavior. 
+The learner constantly interacts with its environment to gain new information. A second instance interpretes the 
+actions a learner carries out and rewards it depending on the actions outcome for the environment. The goal of 
+the learner now is to maximize its reward over several repetitions. 
 However, he is in conflict with using the information which has already been discovered by his actions 
-or with getting more information through further actions.
-\notes{[too short.]}
+or with getting more information through further actions. Reinforcement Learning has been successfully 
+applied to various problems. 
+Computer games usually offer a multiplayer mode where a user can interact and 
+play the game even without a human opponent. For games with a small number of 
+possible moves after each turn, and therefore a relatively small game tree containing 
+all possible moves, the minimax algorithm\cite{Prog2:bachmaier} can be sufficient. 
+It figures out which next move would minimize the worst-case scenario for all subsequent 
+moves. Therefore, it needs to know all possible moves, which can easily become computationally 
+infeasible for games like Chess or AlphaGo where a general move faces between 35 (Chess) and 
+250 (AlphaGo) possible subsequent game states. 
+Therefore, game artificial intelligences like AlphaGo are using Reinforcement Learning in order to gain 
+experience by themselves\cite{Alpha:silver}.
 
-\subsection{Active Learning}\label{active}
-The goal of Active Learning is to interact with other agents in a clever way in order 
-to label already existing data points and thus achieve a similar performance with less available 
-information as in the method of supervised learning. To achieve this, 
-the learner needs a selection strategy\cite{ActiveToDedicated:calma} that decides whether 
-an action has enough information content to label a data point or not.
-\notes{[too short.]}
-
-\begin{itemize}
-    \item \textit{Image recognition, Optical Character Recognition (OCR)}.
-        Machine Learning methods have also been successfully applied in domains where it's 
-        important to extract information from images such as detecting and classifying 
-        objects or recognizing handwritten characters. Image 
-        recognition and OCR are therefore for example used in medical diagnosis to 
-        detect cancer on radiographs, in autonomous vehicles to detect obstacles and to 
-        stay on track or in post-offices to sort envelopes with hand-written addresses
-        \cite{DisciplineOfML:mitchell}.
-    \item \textit{Games}.
-        Computer Games usually offer a Multiplayer mode where a user can interact and 
-        play the game even without a human opponent. For games with a small number of 
-        possible moves after each turn, and therefore a relatively small game tree containing 
-        all possible moves, the minimax algorithm\cite{Prog2:bachmaier} can be sufficient. 
-        It figures out which next move would minimize the worst-case scenario for all subsequent 
-        moves. Therefore, it needs to know all possible moves, which can easily become computationally 
-        infeasible for games like Chess or AlphaGo where a general move faces between 35 (Chess) and 
-        250 (AlphaGo) possible subsequent game states.
-        In order to still have challenging opponents, modern Games are using ML to gain experience 
-        by themselves.
-\end{itemize}
-
+%\subsection{Active Learning}\label{active}
+%The goal of Active Learning is to interact with other agents in a clever way in order 
+%to label already existing data points and thus achieve a similar performance with less available 
+%information as in the method of supervised learning. To achieve this, 
+%the learner needs a selection strategy\cite{ActiveToDedicated:calma} that decides whether 
+%an action has enough information content to label a data point or not.
+%\notes{[Example needed.]}
 
 
 \section{When using CIL is helpful}\label{AdvantageOfCIL}
@@ -413,31 +412,37 @@ an own contribution to actively support human collaboration processes by
 recognising their wishes and needs and reacting accordingly\cite{CIL:sick}.
 
 \section{Classification of CIL in Organic Computing}
-\notes{[The author could introduce the domain of Organic Computing a little more in detail, e.g.\ by describing the self-x properties.]}
-CIL systems can be described in many ways as \textit{organic}. In general, systems are being called organic, 
-if they fulfill so-called self-x-properties\cite{Organic:schloer}\cite{Organic:schmeck}.
+The term ``organic'' can be intuitively described as structures being live-like and making decisions on their own. 
+A more formal way of characterizing even technical systems as organic is checking the applicability of 
+so-called self-x-properties\cite{Organic:schloer}\cite{Organic:schmeck}.
 
 \subsection{Self-Configuration}
-They configure themselves in the sense that they are not aligned by developers to an application case.
+A system is being called self-configurable, if it can modify its parameters on its own.
+CIL systems configure themselves in the sense that they are not aligned by developers to any narrow application 
+case but adapt their behavior in the current environment to its desired purpose.
 
 \subsection{Self-Optimization}
-They optimize themselves by applying various strategies of ML to expand their knowledge.
+In order to deliver reasonable output, a systems needs to constantly improve itself over its lifetime. Thus, parts of 
+the system have to analyze decisions made during run-time.
+CIL systems optimize themselves by applying various strategies of ML to expand their knowledge.
 
-\subsection{Self- Healing and Protecting}
-They heal and protect themselves because cooperation with other systems is possible and desired.
+\subsection{Self- Healing and Protection}
+Furthermore, if systems work in changing environments and interact with other agents, they're always exposed to 
+the risk of failure. Therefore, organic systems need to detect failures (either triggered by an own action or by an intruder) 
+and fix the faulty part.
+CIL systems in particular need to implement these features due to their desired interaction with multiple 
+other heterogeneous systems.
 
 \subsection{Self-Explanation}
-Depending on which methods of ML are used, CIL systems are also more or less self-explanatory 
-during development\cite{Organic:schloer}.
-\notes{[why?]}
-
+Ultimately, CIL systems need to stay self-explanatory. Due to the fact that they interact with a lot of other systems, over 
+different communication channels and in changing environments, networks of a massive amount of intelligent systems will arise. 
+Comprehending and understanding these structures even after a long period of time will be a difficult but important research 
+area in the field of CIL systems\cite{Organic:schloer}.
 
 \section{Application examples}
-In the following we will discuss some interesting application examples.
+In the following section we will discuss some interesting application examples.
 
 \subsection{Clustering}
-\notes{[Clustering is not really a domain on it's own but can be used to solve problems in health domain, etc.\ pp.]}
-\notes{[Clarify the k-Means Algorithm by pointing out the steps.]}
 Clustering is the perfect example of a starting point without sufficient information about an amount of data. 
 The basic goal here is to divide a data set into homogeneous groups of individual data points in order to create structure in it.
 In this context data points must be checked for similarity in some way.
@@ -449,11 +454,18 @@ Furthermore, clustering can be used to identify communities in social networks, 
 Unfortunately, real-world data in these areas is often unclean, contains false or unwanted data and is often present in 
 dimensions $>$3, so that people alone, who are otherwise very good at recognizing similarities in dimensions $\le3$, are dependent on ML and vice-versa.
 
-There are different approaches to cluster data into homogeneous groups. One of them is the k-Means algorithm\cite{FoundationsOfML:mohri}. In the beginning it requires the number of $k$ clusters it is supposed to find. 
-It then randomly places $k$ centroids in space, which should represent the center of a cluster, and assigns each item to the nearest centroid. After the assignment, each centroid is placed at the center of all items assigned to it. This process of assigning the items and moving the centroids to
-the center is now repeated until the assignments of the items no longer change.
+There are different approaches to cluster data into homogeneous groups. One of them is the k-Means algorithm\cite{FoundationsOfML:mohri}. In the beginning it requires the number of $k$ clusters it is supposed to find. It then proceeds as follows: 
+\begin{enumerate}
+    \item Randomly place $k$ centroids in space (these represent the center of a single cluster).
+    \item Assign each item in space to its nearest centroid.
+    \item Move each centroid to the center of all items assigned to it.
+    \item Repeat (2) and (3) until the assignments of the items no longer change.
+\end{enumerate}
+%It then randomly places $k$ centroids in space, which should represent the center of a cluster, and assigns each item to the nearest centroid. After the assignment, each centroid is placed at the center of all items assigned to it. This process of assigning the items and moving the centroids to
+%the center is now repeated until the assignments of the items no longer change.
 
-What all cluster algorithms have in common is that they need a way to compare data points for similarity respectively distance.
+What all cluster algorithms have in common is that they need a way to compare data points for similarity respectively distance 
+in order to find centers.
 Classically, data points are tried to be displayed in an n-dimensional metric space and, for example, their Euclidean distance is measured for similarity.
 The Euclidean distance between two data points $p = (p_1, p_2, \dots, p_n)$ and $q = (q_1, q_2, \dots, q_n)$ and thus their
 similarity, when a small result means more similar, is defined as
@@ -529,6 +541,8 @@ successfully and productively.
     Calma, A., Leimeister, J. M., Lukowicz, P., Oeste-Rei{\ss}, S., Reitmaier, T., Schmidt, A., \dots \& Zweig, K. A. (2016, April). From active learning to dedicated collaborative interactive learning. In ARCS 2016; 29th International Conference on Architecture of Computing Systems; Proceedings of (pp. 1-8). VDE.
 \bibitem{BrainInf:holzinger}
     Holzinger, A. (2016). Interactive machine learning for health informatics: when do we need the human-in-the-loop?. Brain Informatics, 3(2), 119-131.
+\bibitem{Alpha:silver}
+    Silver, D., Hassabis, D. (2016, January). AlphaGo: Mastering the ancient game of Go with Machine Learning. Google AI Blog. Retrieved from \url{https://ai.googleblog.com/2016/01/alphago-mastering-ancient-game-of-go.html} on August 24, 2018. 
 \bibitem{MLStudiesUsingCheckers:samuel}
     Samuel, A. L. (1959). Some studies in machine learning using the game of checkers. IBM Journal of research and development, 3(3), 210-229.
 \bibitem{Organic:schloer}
@@ -542,7 +556,7 @@ successfully and productively.
 \bibitem{Foldit:web}
     The Science Behind Foldit. (n.d.). University of Washington, Departments of Computer Science \& Engineering and Biochemistry. Retrieved from \url{https://fold.it/portal/info/about} on June 29, 2018. 
 \bibitem{Foldit:results}
-    Boyle, A., (2011, September). Gamers solve molecular puzzle that baffled scientists. Cosmic Log.\\
+    Boyle, A. (2011, September). Gamers solve molecular puzzle that baffled scientists. Cosmic Log.\\
     Retrieved from \url{https://cosmiclog.nbcnews.com/_news/2011/09/18/7802623-gamers-solve-molecular-puzzle-that-baffled-scientists} on June 29, 2018.
 \bibitem{Manu:wuest}
     Wuest, T., Weimer, D., Irgens, C., \& Thoben, K. D. (2016). Machine learning in manufacturing: advantages, challenges, and applications. Production \& Manufacturing Research, 4(1), 23-45.

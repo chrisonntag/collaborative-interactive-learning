@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.6)  22 AUG 2018 11:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.6)  24 AUG 2018 21:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -329,17 +329,29 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 ]
-Underfull \hbox (badness 7925) in paragraph at lines 376--384
-[]\OT1/ptm/m/it/10 Image recog-ni-tion, Op-tical Char-ac-ter Recog-ni-tion
+[2 <./images/CIL.pdf>] [3]
+Underfull \hbox (badness 7344) in paragraph at lines 545--546
+[]\OT1/ptm/m/n/8 Silver, D., Has-s-abis, D. (2016, Jan-uary). Al-phaGo: Mas-ter
+-ing
  []
 
-[2 <./images/CIL.pdf>] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 544--546
+
+Underfull \hbox (badness 10000) in paragraph at lines 545--546
+\OT1/ptm/m/n/8 the an-cient game of Go with Ma-chine Learn-ing. Google
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 545--546
+\OT1/ptm/m/n/8 AI Blog. Re-trieved from $https : / / ai . googleblog . com / 20
+16 / 01 /
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 559--561
 \OT1/ptm/m/n/8 Retrieved from $https : / / cosmiclog . nbcnews . com / []news /
  2011 / 09 / 18 /
  []
 
-[4]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -356,8 +368,8 @@ Before submitting the final camera ready copy, remember to:
 ] (./paper.aux) ) 
 Here is how much of TeX's memory you used:
  3553 strings out of 492985
- 52793 string characters out of 6132586
- 127389 words of memory out of 5000000
+ 52799 string characters out of 6132586
+ 127376 words of memory out of 5000000
  7081 multiletter control sequences out of 15000+600000
  37835 words of font info for 79 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -375,7 +387,7 @@ exlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/201
 6/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2016/texmf-d
 ist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/
 type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (5 pages, 173358 bytes).
+Output written on paper.pdf (5 pages, 174285 bytes).
 PDF statistics:
  85 PDF objects out of 1000 (max. 8388607)
  60 compressed objects within 1 object stream
